@@ -1,6 +1,8 @@
 ---
 title: "Historical horse population in Canada"
 bibliography: references.bib
+params:
+  province: "Ontario"
 output: 
   github_document:
     toc: true
@@ -67,7 +69,7 @@ max_horses <- horse_pop %>%
 max_horses
 ```
 
-Below we zoom in and look at the province of Alberta:
+Below we zoom in and look at the province of `r params$province`:
 
 ```{r plot province, fig.width=5, fig.height=4}
 province_plot <- horse_pop %>% 
